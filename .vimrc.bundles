@@ -1,6 +1,6 @@
 " Basics {
 		set nocompatible
-		set background=dark " Assume a dark background
+		set background=dark 			" Assume a dark background
 " }
  
 " Bundle Support {
@@ -22,17 +22,17 @@
 		Bundle 'Lokaltog/powerline'
 		Bundle 'tpope/vim-fugitive'
     
-    " Autocomplete
-        Bundle "MarcWeber/vim-addon-mw-utils"
-        Bundle "tomtom/tlib_vim"
-        Bundle "garbas/vim-snipmate"
+    	" Autocomplete
+        	Bundle "MarcWeber/vim-addon-mw-utils"
+        	Bundle "tomtom/tlib_vim"
+        	Bundle "garbas/vim-snipmate"
 
 	" Python
 		Bundle 'klen/python-mode'
  
 	" Ruby
 		Bundle 'vim-ruby/vim-ruby'
-        Bundle 'tpope/vim-rails'
+        	Bundle 'tpope/vim-rails'
 		let g:rubycomplete_buffer_loading = 1
  
 	" Javascript
@@ -43,7 +43,7 @@
 		"Bundle 'kchmck/vim-coffee-script'
  
 	" HTML
-	Bundle 'amirh/HTML-AutoCloseTag'
-	Bundle 'hail2u/vim-css3-syntax'
-	Bundle 'tpope/vim-haml'
+		Bundle 'amirh/HTML-AutoCloseTag'
+		Bundle 'hail2u/vim-css3-syntax'
+		Bundle 'tpope/vim-haml'
 " }
