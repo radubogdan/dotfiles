@@ -22,17 +22,17 @@
 		Bundle 'Lokaltog/powerline'
 		Bundle 'tpope/vim-fugitive'
     
-    	" Autocomplete
-        	Bundle "MarcWeber/vim-addon-mw-utils"
-        	Bundle "tomtom/tlib_vim"
-        	Bundle "garbas/vim-snipmate"
+    " Autocomplete
+        Bundle "MarcWeber/vim-addon-mw-utils"
+        Bundle "tomtom/tlib_vim"
+        Bundle "garbas/vim-snipmate"
 
 	" Python
 		Bundle 'klen/python-mode'
  
 	" Ruby
 		Bundle 'vim-ruby/vim-ruby'
-        	Bundle 'tpope/vim-rails'
+        Bundle 'tpope/vim-rails'
 		let g:rubycomplete_buffer_loading = 1
  
 	" Javascript
