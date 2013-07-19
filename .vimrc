@@ -3,6 +3,7 @@
 set nocompatible
  
 " Bundles {
+	
 	" Bundle Support {
 		filetype on
 		filetype off
@@ -19,59 +20,58 @@ set nocompatible
  
 " General {
 
-	filetype plugin indent on 					            " Automatically detect file types.
-        syntax enable 								        " Highlight
-	set mouse=a 								            " Enable mouse usage
+	filetype plugin indent on 					" Automatically detect file types.
+    syntax enable 								" Highlight
+	set mouse=a 								" Enable mouse usage
 	set mousehide
 	scriptencoding utf-8
-	set history=1000 							            " Store history
-	set spell 								                " Spell checking
-	cmap w!! w !sudo dot % >/dev/null 			            " When forgot to sudo, write the file
+	set history=1000 							" Store history
+	set spell 									" Spell checking
+	cmap w!! w !sudo dot % >/dev/null 			" When forgot to sudo, write the file
 
 	" let g:SuperTabDefaultCompletionType = "<c-n>"
 	
 " }
  
 " User Interface and Formatting {
-
 	set t_Co=256
     set background=dark
     color molokai 
     let g:solarized_underline = 0
 
-	"set guioptions-=m  						        " For gVIM
-	"set guioptions-=T 							        " For gVIM
-	"set guioptions-=r 							        " For gVIM
+	"set guioptions-=m  						" For gVIM
+	"set guioptions-=T 							" For gVIM
+	"set guioptions-=r 							" For gVIM
  
-	set laststatus=2 							        " Show powerline
-	set statusline=%<%f\ 						        " Filename
-	set statusline+=%w%h%m%r 						    " Options
-	set statusline+=\ [%{&ff}/%Y]						" Filetype
-	set statusline+=\ [%{getcwd()}] 					" Current dir
-	set statusline+=%=%-14.(%l,%c%V%)\ %p%% 			" Right aligned file nav info
+	set laststatus=2 							" Show powerline
+	set statusline=%<%f\ 						" Filename
+	set statusline+=%w%h%m%r 					" Options
+	set statusline+=\ [%{&ff}/%Y]				" Filetype
+	set statusline+=\ [%{getcwd()}] 			" Current dir
+	set statusline+=%=%-14.(%l,%c%V%)\ %p%% 	" Right aligned file nav info
  
-	set ruler 								            " Show the ruler
-	set showcmd 								        " Show partial commands in status line
-	set backspace=indent,eol,start 						" Backspace work
-	set linespace=0 							        " No spaces between rows
-	set nu 									            " Line numbers ON
-	set showmatch 								        " Show matching brackets or parenthesis
-	set wildmenu 								        " Show list instead of just completing
-	set scrolljump=7 							        " Scroll when cursur leaves screen
-	set scrolloff=5 							        " Minimum lines above and below cursur
-	set foldenable 								        " Auto fold code
-	set nowrap 									        " Wrap long lines
-	set autoindent 								        " Auto indent at same level
-	set shiftwidth=4 							        " Use indents of 4 spaces
-	set expandtab 								        " Tabs are spaces
-	set tabstop=4 								        " An indentation every four columns
-	set softtabstop=4 							        " Backspace delete indent
+	set ruler 									" Show the ruler
+	set showcmd 								" Show partial commands in status line
+	set backspace=indent,eol,start 				" Backspace work
+	set linespace=0 							" No spaces between rows
+	set nu 										" Line numbers ON
+	set showmatch 								" Show matching brackets or parenthesis
+	set wildmenu 								" Show list instead of just completing
+	set scrolljump=7 							" Scroll when cursur leaves screen
+	set scrolloff=5 							" Minimum lines above and below cursur
+	set foldenable 								" Auto fold code
+	set nowrap 									" Wrap long lines
+	set autoindent 								" Auto indent at same level
+	set shiftwidth=4 							" Use indents of 4 spaces
+	set expandtab 								" Tabs are spaces
+	set tabstop=4 								" An indentation every four columns
+	set softtabstop=4 							" Backspace delete indent
  
  	autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
   	autocmd FileType python set sw=4 sts=4 et
   	
-	nmap <leader>l :set list!<CR> 						" Show me whitespaces
-    
+	nmap <leader>l :set list!<CR> 				" Show me whitespaces
+    map <F4> <C-R>=<CR><LF>
 " }
 
 " Plugins {
