@@ -15,11 +15,13 @@
 		Bundle 'gmarik/vundle'
  
 	" General
+        Bundle 'nathanaelkane/vim-indent-guides'
 		Bundle 'scrooloose/nerdtree'
 		Bundle 'spf13/vim-colors'
 		Bundle 'altercation/vim-colors-solarized'
 		Bundle 'kien/ctrlp.vim'
 		Bundle 'Lokaltog/powerline'
+        Bundle "myusuf3/numbers.vim"
 		Bundle 'tpope/vim-fugitive'
     
     " Autocomplete

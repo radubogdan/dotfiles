@@ -27,7 +27,7 @@ set nocompatible
 	scriptencoding utf-8
 	set history=1000 							" Store history
 	set spell 									" Spell checking
-	cmap w!! w !sudo dot % >/dev/null 			" When forgot to sudo, write the file
+	cmap w!! w !sudo tee % >/dev/null 			" When forgot to sudo, write the file
 
 	" let g:SuperTabDefaultCompletionType = "<c-n>"
 	
@@ -38,7 +38,6 @@ set nocompatible
     set background=dark
     color molokai 
     let g:solarized_underline = 0
-
 	"set guioptions-=m  						" For gVIM
 	"set guioptions-=T 							" For gVIM
 	"set guioptions-=r 							" For gVIM
@@ -71,6 +70,7 @@ set nocompatible
   	autocmd FileType python set sw=4 sts=4 et
   	
 	nmap <leader>l :set list!<CR> 				" Show me whitespaces
+    nnoremap <F3> :NumbersToggle<CR>
     map <F4> <C-R>=<CR><LF>
 " }
 
