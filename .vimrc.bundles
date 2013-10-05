@@ -23,6 +23,7 @@
 		Bundle 'Lokaltog/powerline'
         Bundle "myusuf3/numbers.vim"
 		Bundle 'tpope/vim-fugitive'
+        Bundle 'Lokaltog/vim-easymotion'
     
     " Autocomplete
         Bundle "MarcWeber/vim-addon-mw-utils"
@@ -31,6 +32,7 @@
 
 	" Python
 		Bundle 'klen/python-mode'
+        Bundle 'kevinw/pyflakes'
  
 	" Ruby
 		Bundle 'vim-ruby/vim-ruby'
@@ -38,14 +40,14 @@
 		let g:rubycomplete_buffer_loading = 1
  
 	" Javascript
-		"Bundle 'elzr/vim-json'
-		"Bundle 'groenewege/vim-less'
-		"Bundle 'pangloss/vim-javascript'
-		"Bundle 'briancollins/vim-jst'
-		"Bundle 'kchmck/vim-coffee-script'
+		Bundle 'elzr/vim-json'
+		Bundle 'groenewege/vim-less'
+		Bundle 'pangloss/vim-javascript'
+		Bundle 'briancollins/vim-jst'
+		Bundle 'kchmck/vim-coffee-script'
  
 	" HTML
-	Bundle 'amirh/HTML-AutoCloseTag'
-	Bundle 'hail2u/vim-css3-syntax'
-	Bundle 'tpope/vim-haml'
+        Bundle 'amirh/HTML-AutoCloseTag'
+        Bundle 'hail2u/vim-css3-syntax'
+        Bundle 'tpope/vim-haml'
 " }

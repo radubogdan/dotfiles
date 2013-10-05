@@ -27,6 +27,7 @@ set nocompatible
 	scriptencoding utf-8
 	set history=1000 							" Store history
 	set spell 									" Spell checking
+    set nobackup                                " Stop giving me ~ files. Use jj instead!
 	cmap w!! w !sudo tee % >/dev/null 			" When forgot to sudo, write the file
 
 	" let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -66,11 +67,18 @@ set nocompatible
 	set tabstop=4 								" An indentation every four columns
 	set softtabstop=4 							" Backspace delete indent
  
- 	autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+ 	autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber set ai sw=2 sts=2 et
   	autocmd FileType python set sw=4 sts=4 et
+
+    let g:indent_guides_auto_colors = 0
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#212121 ctermbg=3
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#121212 ctermbg=4
+    let g:indent_guides_start_level = 2
+    let g:indent_guides_guide_size = 2
   	
 	nmap <leader>l :set list!<CR> 				" Show me whitespaces
     nnoremap <F3> :NumbersToggle<CR>
+    noremap jj <Esc>:w<CR>
     map <F4> <C-R>=<CR><LF>
 " }
 
@@ -79,7 +87,7 @@ set nocompatible
 		map <F2> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 		map <leader>e :NERDTreeFind<CR>
 		nmap <leader>nt :NERDTreeFind<CR>
-        
+
         let g:NERDTreeWinPos = "right"
 		let NERDTreeShowBookmarks=1
 		let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
