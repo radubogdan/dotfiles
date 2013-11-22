@@ -1,53 +1,59 @@
-" Basics {
-		set nocompatible
-		set background=dark " Assume a dark background
-" }
- 
-" Bundle Support {
-		filetype on
-		filetype off
-		set rtp+=~/.vim/bundle/vundle/
-		call vundle#rc()
-" }
- 
-" Bundles {
-	" Deps
-		Bundle 'gmarik/vundle'
- 
-	" General
-        Bundle 'nathanaelkane/vim-indent-guides'
-		Bundle 'scrooloose/nerdtree'
-		Bundle 'spf13/vim-colors'
-		Bundle 'altercation/vim-colors-solarized'
-		Bundle 'kien/ctrlp.vim'
-		Bundle 'Lokaltog/powerline'
-        Bundle "myusuf3/numbers.vim"
-		Bundle 'tpope/vim-fugitive'
-        Bundle 'Lokaltog/vim-easymotion'
-    
-    " Autocomplete
-        Bundle "MarcWeber/vim-addon-mw-utils"
-        Bundle "tomtom/tlib_vim"
-        Bundle "garbas/vim-snipmate"
+"Basics
+    set nocompatible
+    set background=dark " Assume a dark background
 
-	" Python
-		Bundle 'klen/python-mode'
+"Bundle Support
+    filetype on
+    filetype off
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+
+"Bundles
+    "Deps
+        Bundle 'gmarik/vundle'
+        Bundle 'marcweber/vim-addon-mw-utils'
+        Bundle "garbas/vim-snipmate"
+    "General
+        Bundle 'nathanaelkane/vim-indent-guides'
+        Bundle 'scrooloose/nerdtree'
+        Bundle 'spf13/vim-colors'
+        Bundle 'altercation/vim-colors-solarized'
+        Bundle 'kien/ctrlp.vim'
+        Bundle 'Lokaltog/powerline'
+        Bundle 'myusuf3/numbers.vim'
+        Bundle 'tpope/vim-fugitive'
+        Bundle 'Lokaltog/vim-easymotion'
+        Bundle 'scrooloose/nerdcommenter'
+        Bundle 'tpope/vim-surround'
+        Bundle 'airblade/vim-gitgutter'
+        Bundle 'godlygeek/tabular'
+        Bundle 'Raimondi/delimitMate'
+
+    "Autocomplete
+        Bundle 'tomtom/tlib_vim'
+
+    "Python
+        Bundle 'klen/python-mode'
         Bundle 'kevinw/pyflakes'
- 
-	" Ruby
-		Bundle 'vim-ruby/vim-ruby'
+
+    "Ruby
+        Bundle 'vim-ruby/vim-ruby'
         Bundle 'tpope/vim-rails'
-		let g:rubycomplete_buffer_loading = 1
- 
-	" Javascript
-		Bundle 'elzr/vim-json'
-		Bundle 'groenewege/vim-less'
-		Bundle 'pangloss/vim-javascript'
-		Bundle 'briancollins/vim-jst'
-		Bundle 'kchmck/vim-coffee-script'
- 
-	" HTML
+        let g:rubycomplete_buffer_loading = 1
+
+    "Javascript
+        Bundle 'elzr/vim-json'
+        Bundle 'pangloss/vim-javascript'
+        Bundle 'briancollins/vim-jst'
+        Bundle 'kchmck/vim-coffee-script'
+        Bundle 'jelera/vim-javascript-syntax'
+        Bundle 'scrooloose/syntastic'
+
+    "HTML
         Bundle 'amirh/HTML-AutoCloseTag'
         Bundle 'hail2u/vim-css3-syntax'
         Bundle 'tpope/vim-haml'
-" }
+
+    "CSS3
+        Bundle 'skammer/vim-css-color'
+        Bundle 'hail2u/vim-css3-syntax'
