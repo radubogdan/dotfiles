@@ -35,7 +35,7 @@
         
 
     "Autocomplete
-        Bundle 'marcweber/vim-addon-mw-utils'
+        Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
         Bundle 'Shougo/neocomplcache.vim'
         Bundle 'honza/vim-snippets'

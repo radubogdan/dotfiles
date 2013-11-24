@@ -2,7 +2,7 @@
 "First line to rule them all
 set nocompatible
 
-" Setting up Vundle - the vim plugin bundler
+" Setting up Vundle
     let VundleDefault = 1
     let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
     if !filereadable(vundle_readme)
@@ -11,12 +11,6 @@ set nocompatible
         silent !mkdir -p ~/.vim/bundle
         silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
         let VundleDefault = 0
-    endif
-
-    if VundleDefault == 0
-        echo "Installing Bundles"
-        echo ""
-        :BundleInstall
     endif
 
 " Bundles
@@ -31,6 +25,12 @@ set nocompatible
         source ~/.vimrc.bundles
         endif
 
+    "Install Vundles
+	if VundleDefault == 0
+	    echo "Installing Bundles"
+	    echo ""
+	    :BundleInstall
+   	endif
 "General
     filetype plugin indent on         " Automatically detect file types.
     syntax enable                     " Highlight
