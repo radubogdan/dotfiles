@@ -11,8 +11,7 @@
 "Bundles
     "Deps
         Bundle 'gmarik/vundle'
-        Bundle 'marcweber/vim-addon-mw-utils'
-        Bundle "garbas/vim-snipmate"
+
     "General
         Bundle 'nathanaelkane/vim-indent-guides'
         Bundle 'scrooloose/nerdtree'
@@ -28,9 +27,19 @@
         Bundle 'airblade/vim-gitgutter'
         Bundle 'godlygeek/tabular'
         Bundle 'Raimondi/delimitMate'
+        Bundle 'majutsushi/tagbar'
+        Bundle 'fisadev/vim-ctrlp-cmdpalette'
+        Bundle 'mattn/emmet-vim'
+        Bundle 'kien/tabman.vim'
+        Bundle 'bling/vim-airline'
+        
 
     "Autocomplete
+        Bundle 'marcweber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
+        Bundle 'Shougo/neocomplcache.vim'
+        Bundle 'honza/vim-snippets'
+        Bundle 'garbas/vim-snipmate'
 
     "Python
         Bundle 'klen/python-mode'
@@ -53,6 +62,7 @@
         Bundle 'amirh/HTML-AutoCloseTag'
         Bundle 'hail2u/vim-css3-syntax'
         Bundle 'tpope/vim-haml'
+        Bundle 'matchit.zip'
 
     "CSS3
         Bundle 'skammer/vim-css-color'

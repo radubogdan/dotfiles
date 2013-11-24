@@ -2,6 +2,23 @@
 "First line to rule them all
 set nocompatible
 
+" Setting up Vundle - the vim plugin bundler
+    let VundleDefault = 1
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme)
+        echo "Installing Vundle"
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        let VundleDefault = 0
+    endif
+
+    if VundleDefault == 0
+        echo "Installing Bundles"
+        echo ""
+        :BundleInstall
+    endif
+
 " Bundles
     "Bundle Support
         filetype on
@@ -15,7 +32,6 @@ set nocompatible
         endif
 
 "General
-
     filetype plugin indent on         " Automatically detect file types.
     syntax enable                     " Highlight
     set mouse=a                       " Enable mouse usage
@@ -34,11 +50,6 @@ set nocompatible
     highlight clear SignColumn
 
     set laststatus=2                                   " Show powerline
-    set statusline=%<%f\                               " Filename
-    set statusline+=%w%h%m%r                           " Options
-    set statusline+=\ [%{&ff}/%Y]                      " Filetype
-    set statusline+=\ [%{getcwd()}]                    " Current dir
-    set statusline+=%=%-14.(%l,%c%V%)\ %p%%            " Right aligned file nav info
 
     set ruler                                          " Show the ruler
     set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
@@ -48,9 +59,9 @@ set nocompatible
     set nu                                             " Line numbers ON
     set showmatch                                      " Show matching brackets or parenthesis
     set wildmenu                                       " Show list instead of just completing
-    set wildmode=list:longest,full                     " Command <Tab> completion, list matches, then longest common part, then all.
+    set wildmode=list:longest                          " Command <Tab> completion, list matches, then longest common part, then all.
     set scrolljump=9                                   " Scroll when cursur leaves screen
-    set scrolloff=8                                    " Minimum lines above and below cursur
+    set scrolloff=3                                    " Minimum lines above and below cursur
     set foldenable                                     " Auto fold code
     set nowrap                                         " Wrap long lines
     set autoindent                                     " Auto indent at same level
@@ -60,27 +71,26 @@ set nocompatible
     set incsearch                                      " Find as you type search
     set hlsearch                                       " Highlight search terms
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:.     " Highlight problematic whitespace
-    set pastetoggle=<F12>                               " pastetoggle (sane indentation on pastes)
+    set pastetoggle=<F12>                              " pastetoggle (sane indentation on pastes)
     "set expandtab                                      " Tabs are spaces
 
     autocmd FileType ruby,haml,eruby,yaml,html,sass,scss,cucumber set ai sw=2 sts=2 et
     autocmd FileType python,javascript set sw=4 sts=4 et
 
-    let g:indent_guides_auto_colors = 0
-    let g:syntastic_check_on_open=1
+"Map
+    "Grep
+        command! -nargs=1 RecurGrep lvimgrep /<args>/gj ./**/*.* | lopen | set nowrap
+        command! -nargs=1 RecurGrepFast silent exec 'lgrep! <q-args> ./**/*.*' | lopen
+        nmap ,R :RecurGrep
+        nmap ,r :RecurGrepFast
+        nmap ,wR :RecurGrep <cword><CR>
+        nmap ,wr :RecurGrepFast <cword><CR>
 
-
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#212121 ctermbg=3
-    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=4
-    set ts=4 sw=4 et
-    let g:indent_guides_start_level = 2
-    let g:indent_guides_guide_size = 1
-
-    nmap <leader>l :set list!<CR> 			" Show me whitespaces
-    nmap <F8> :TagbarToggle<CR>
-    nnoremap <F3> :NumbersToggle<CR>
-    noremap jj <Esc>:w<CR>
-    map <F4> <C-R>=<CR><LF>
+    "Others
+        nmap <leader>l :set list!<CR> 			" Show me whitespaces
+        nnoremap <F3> :NumbersToggle<CR>
+        noremap jj <Esc>:w<CR>
+        map <F4> <C-R>=<CR><LF>
 
 "Plugins
     "NERDTree
@@ -114,5 +124,57 @@ set nocompatible
         let g:pymode_syntax_all = 1
         let g:pymode_syntax_indent_errors = g:pymode_syntax_all
         let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
     "GitGutter
+        let g:gitgutter_eager = 0
         let g:gitgutter_realtime = 0
+
+    "Tagbar
+        map <F4> :TagbarToggle<CR>
+        let g:tagbar_autofocus = 1
+    
+    "Vim-airline
+        let g:airline_powerline_fonts = 0
+        let g:airline_theme = 'wombat'
+        let g:airline#extensions#whitespace#enabled = 0
+
+    "Statusline -> disable vim-airline for this to work.
+        set statusline=%<%f\                               " Filename
+        set statusline+=%w%h%m%r                           " Options
+        set statusline+=\ [%{&ff}/%Y]                      " Filetype
+        set statusline+=\ [%{getcwd()}]                    " Current dir
+        set statusline+=%=%-14.(%l,%c%V%)\ %p%%            " Right aligned file nav info
+
+    "Indent guide lines
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#212121 ctermbg=3
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=4
+        let g:indent_guides_start_level = 2
+        let g:indent_guides_guide_size = 1
+        set ts=4 sw=4 et
+        let g:indent_guides_auto_colors = 0
+        let g:syntastic_check_on_open=1
+
+    "Neocomplcache
+        let g:neocomplcache_enable_at_startup = 1
+        let g:neocomplcache_enable_ignore_case = 1
+        let g:neocomplcache_enable_smart_case = 1
+        let g:neocomplcache_enable_auto_select = 1
+        let g:neocomplcache_enable_fuzzy_completion = 1
+        let g:neocomplcache_enable_camel_case_completion = 1
+        let g:neocomplcache_enable_underbar_completion = 1
+        let g:neocomplcache_fuzzy_completion_start_length = 1
+        let g:neocomplcache_auto_completion_start_length = 1
+        let g:neocomplcache_auto_completion_start_length = 1
+        let g:neocomplcache_manual_completion_start_length = 1
+        let g:neocomplcache_min_keyword_length = 1
+        let g:neocomplcache_min_syntax_length = 1
+        let g:neocomplcache_same_filetype_lists = {}
+        let g:neocomplcache_same_filetype_lists._ = '_'"
+    
+    "Tabman
+        let g:tabman_toggle = 'tl'
+        let g:tabman_focus = 'tf'
+
+    "Autoclose
+        let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
+
