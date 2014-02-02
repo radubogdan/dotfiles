@@ -32,7 +32,7 @@ to perform simple filesystem operations.
 ```F12``` opens NerdTree
 ```?``` is help
 
-![NerdTree][http://imgur.com/DEsx860]
+![NerdTree image][nerdtree-img]
 
 #### [CtrlP](https://github.com/kien/ctrlp.vim)
 
@@ -40,7 +40,7 @@ Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 
 ```ctrl+p``` start
 
-![CtrlP][http://imgur.com/J6xqKs1]
+![CtrlP image][ctrlp-img]
 
 #### [Surround](https://github.com/tpope/vim-surround)
 
@@ -50,13 +50,13 @@ Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tag
 ```cs"'```  - replace ```"``` with ```'```
 ```ds"``` - remove ```"``` from ```"word"```
 
-![Surround][http://i.imgur.com/Y0KTPCl.gif]
+![Surround image][surround-img]
 
 #### [Neocomplcache](https://github.com/Shougo/neocomplcache.vim)
 
 Amaizing autocomplete plugin. Just type and you will see how it pops up.
 
-![Neo][http://imgur.com/FTMMsKq]
+![Neocomplcache image][neo-img]
 
 #### [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
 
@@ -75,4 +75,11 @@ use ```:help fugitive```
 Awesome plugin for browsing tags of source code. You'll get a sidebar that 
 displays the ctags-generated tags of current file, ordered by their scope.
 
-![Tag][http://imgur.com/APEacil]
+![Tagbar image][tag-img]
+
+[nerdtree-img]:http://imgur.com/DEsx860
+[ctrlp-img]:http://imgur.com/J6xqKs1
+[surround-img]:http://i.imgur.com/Y0KTPCl.gif
+[neo-img]:http://imgur.com/FTMMsKq
+[tag-img]:http://imgur.com/APEacil
+
