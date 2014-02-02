@@ -30,6 +30,7 @@ This allows you to explore your filesystem, open files and directories. You can 
 to perform simple filesystem operations.
 
 ```F12``` opens NerdTree
+
 ```?``` is help
 
 ![NerdTree image][nerdtree-img]
@@ -47,7 +48,9 @@ Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.
 
 ```ysiw"``` - ```word``` to ```"word"```.
+
 ```cs"'```  - replace ```"``` with ```'```
+
 ```ds"``` - remove ```"``` from ```"word"```
 
 ![Surround image][surround-img]
@@ -63,6 +66,7 @@ Amaizing autocomplete plugin. Just type and you will see how it pops up.
 You can comment a line or mutliple lines easily. It will automaticaly recognize the languge.
 
 ```\cn``` - comment current line
+
 ```\cu``` - uncomment current line
 
 #### [Fugitive](https://github.com/tpope/vim-fugitive)
@@ -77,9 +81,9 @@ displays the ctags-generated tags of current file, ordered by their scope.
 
 ![Tagbar image][tag-img]
 
-[nerdtree-img]:http://imgur.com/DEsx860
-[ctrlp-img]:http://imgur.com/J6xqKs1
+[nerdtree-img]:http://i.imgur.com/DEsx860.gif
+[ctrlp-img]:http://i.imgur.com/J6xqKs1.png
 [surround-img]:http://i.imgur.com/Y0KTPCl.gif
-[neo-img]:http://imgur.com/FTMMsKq
-[tag-img]:http://imgur.com/APEacil
+[neo-img]:http://i.imgur.com/FTMMsKq.png
+[tag-img]:http://i.imgur.com/APEacil.png
 
