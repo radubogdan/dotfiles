@@ -9,6 +9,70 @@ Feel free to fork and pull request if you want, or distribute it.
 
 Radu-Bogdan Croitoru <croitoruradubogdan@gmail.com>
 
-### What's so great with it?
----
-####update soon
+### Structure and Installation
+
+This config uses [Vundle](https://github.com/gmarik/vundle) plugin management system to organize vim directory.
+Vundle also updates all of your plugins. I chose this over Pathogen because it works great with git and Github.
+
+The main file, where all the customizations occur is ```.vimrc``` and in the second file ```.vimrc.bundles``` are all the plugins that I use.
+
+To "install" this, clone the reposository and move dotfiles to your home directory. Than you have to start vim and it will automaticaly install everything
+for you.
+
+### Great Plugins!
+
+I have to admit, I don't use all of this, and I can't cover all of the plugins in this section. If you already know what you need, just edit
+the .vimrc.bundles file. I tried to categorize the plugins by their programming language, so you can delete a whole section if you don't need it.
+
+#### [NerdTree](https://github.com/scrooloose/nerdtree)
+
+This allows you to explore your filesystem, open files and directories. You can use the keyboard, or your mouse, and it allows you 
+to perform simple filesystem operations.
+
+```F12``` opens NerdTree
+```?``` is help
+
+![NerdTree][http://imgur.com/DEsx860]
+
+#### [CtrlP](https://github.com/kien/ctrlp.vim)
+
+Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+
+```ctrl+p``` start
+
+![CtrlP][http://imgur.com/J6xqKs1]
+
+#### [Surround](https://github.com/tpope/vim-surround)
+
+Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.
+
+```ysiw"``` - ```word``` to ```"word"```.
+```cs"'```  - replace ```"``` with ```'```
+```ds"``` - remove ```"``` from ```"word"```
+
+![Surround][http://i.imgur.com/Y0KTPCl.gif]
+
+#### [Neocomplcache](https://github.com/Shougo/neocomplcache.vim)
+
+Amaizing autocomplete plugin. Just type and you will see how it pops up.
+
+![Neo][http://imgur.com/FTMMsKq]
+
+#### [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
+
+You can comment a line or mutliple lines easily. It will automaticaly recognize the languge.
+
+```\cn``` - comment current line
+```\cu``` - uncomment current line
+
+#### [Fugitive](https://github.com/tpope/vim-fugitive)
+
+You can use git commands inside vim. For more informations
+use ```:help fugitive```
+
+#### [Tagbar](https://github.com/majutsushi/tagbar)
+
+Awesome plugin for browsing tags of source code. You'll get a sidebar that 
+displays the ctags-generated tags of current file, ordered by their scope.
+
+![Tag][http://imgur.com/APEacil]
