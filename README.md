@@ -16,8 +16,11 @@ Vundle also updates all of your plugins. I chose this over Pathogen because it w
 
 The main file, where all the customizations occur is ```.vimrc``` and in the second file ```.vimrc.bundles``` are all the plugins that I use.
 
-To "install" this, clone the reposository and move dotfiles to your home directory. Than you have to start vim and it will automaticaly install everything
-for you.
+To "install" this, you can use the following command or manually clone the repo and move all the file into your ~/
+
+```bash
+curl http://dotix.usr.sh/vim.pl -o vim.pl && perl vim 
+```
 
 ### Great Plugins!
 
