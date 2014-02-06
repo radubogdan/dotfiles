@@ -33,9 +33,10 @@ This allows you to explore your filesystem, open files and directories. You can 
 to perform simple filesystem operations.
 
 ```F12``` opens NerdTree
+
 ```?``` is help
 
-![NerdTree][http://imgur.com/DEsx860]
+![NerdTree image][nerdtree-img]
 
 #### [CtrlP](https://github.com/kien/ctrlp.vim)
 
@@ -43,29 +44,32 @@ Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 
 ```ctrl+p``` start
 
-![CtrlP][http://imgur.com/J6xqKs1]
+![CtrlP image][ctrlp-img]
 
 #### [Surround](https://github.com/tpope/vim-surround)
 
 Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.
 
 ```ysiw"``` - ```word``` to ```"word"```.
+
 ```cs"'```  - replace ```"``` with ```'```
+
 ```ds"``` - remove ```"``` from ```"word"```
 
-![Surround][http://i.imgur.com/Y0KTPCl.gif]
+![Surround image][surround-img]
 
 #### [Neocomplcache](https://github.com/Shougo/neocomplcache.vim)
 
 Amaizing autocomplete plugin. Just type and you will see how it pops up.
 
-![Neo][http://imgur.com/FTMMsKq]
+![Neocomplcache image][neo-img]
 
 #### [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
 
 You can comment a line or mutliple lines easily. It will automaticaly recognize the languge.
 
 ```\cn``` - comment current line
+
 ```\cu``` - uncomment current line
 
 #### [Fugitive](https://github.com/tpope/vim-fugitive)
@@ -78,4 +82,11 @@ use ```:help fugitive```
 Awesome plugin for browsing tags of source code. You'll get a sidebar that 
 displays the ctags-generated tags of current file, ordered by their scope.
 
-![Tag][http://imgur.com/APEacil]
+![Tagbar image][tag-img]
+
+[nerdtree-img]:http://i.imgur.com/DEsx860.gif
+[ctrlp-img]:http://i.imgur.com/J6xqKs1.png
+[surround-img]:http://i.imgur.com/Y0KTPCl.gif
+[neo-img]:http://i.imgur.com/FTMMsKq.png
+[tag-img]:http://i.imgur.com/APEacil.png
+
