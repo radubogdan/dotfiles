@@ -137,4 +137,4 @@ Lean & mean status/tabline for vim that's light as air.
 [em-img]:http://i.imgur.com/1iWLbX0.gif
 [igl-img]:http://i.imgur.com/j0dnVKm.png
 [air-img]:http://i.imgur.com/rAFjisQ.gif
-[sin-img]:http://i.imgur.com/kZHxXXS.png
+[syn-img]:http://i.imgur.com/kZHxXXS.png
