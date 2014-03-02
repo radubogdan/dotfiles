@@ -62,8 +62,10 @@
         Bundle 'amirh/HTML-AutoCloseTag'
         Bundle 'hail2u/vim-css3-syntax'
         Bundle 'tpope/vim-haml'
+        Bundle 'digitaltoad/vim-jade'
         Bundle 'matchit.zip'
 
     "CSS3
         Bundle 'skammer/vim-css-color'
         Bundle 'hail2u/vim-css3-syntax'
+        Bundle 'wavded/vim-stylus'

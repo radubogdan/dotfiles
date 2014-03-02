@@ -74,13 +74,11 @@ set nocompatible
     set pastetoggle=<F12>                              " pastetoggle (sane indentation on pastes)
     "set expandtab                                      " Tabs are spaces
 
-    autocmd FileType ruby,haml,eruby,yaml,html,sass,scss,cucumber set ai sw=2 sts=2 et
-    autocmd FileType python,javascript set sw=4 sts=4 et
+    autocmd FileType ruby,haml,javascript,eruby,yaml,html,sass,scss,cucumber,jade,styl set ai sw=2 sts=2 et
+    autocmd FileType python set sw=2 sts=2 et
 
 "Map
     "Grep
-        command! -nargs=1 RecurGrep lvimgrep /<args>/gj ./**/*.* | lopen | set nowrap
-        command! -nargs=1 RecurGrepFast silent exec 'lgrep! <q-args> ./**/*.*' | lopen
         nmap ,R :RecurGrep
         nmap ,r :RecurGrepFast
         nmap ,wR :RecurGrep <cword><CR>
