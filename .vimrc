@@ -2,7 +2,7 @@
 "First line to rule them all
 set nocompatible
 
-" Setting up Vundle
+"Setting up Vundle
     let VundleDefault = 1
     let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
     if !filereadable(vundle_readme)
@@ -13,7 +13,7 @@ set nocompatible
         let VundleDefault = 0
     endif
 
-" Bundles
+"Bundles
     "Bundle Support
         filetype on
         filetype off
@@ -37,10 +37,11 @@ set nocompatible
     set mouse=a                       " Enable mouse usage
     set mousehide
     scriptencoding utf-8
-    set history=1000                  " Store history
-    set spell                         " Spell checking
-    set nobackup                      " Stop giving me ~ files. Use jj instead!
-    cmap w!! w !sudo tee % >/dev/null " When forgot to sudo, write the file
+    set history=1000                   " Store history
+    set spell                          " Spell checking
+    set nobackup                       " Stop giving me ~ files. Use jj instead!
+    cmap w!! w !sudo tee % >/dev/null  " When forgot to sudo, write the file
+    autocmd BufWritePre * :%s/\s\+$//e " Delete unwanted spaces
 
 "User Interface and Formatting
     set t_Co=256
