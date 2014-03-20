@@ -2,7 +2,7 @@
 "First line to rule them all
 set nocompatible
 
-"Setting up Vundle
+" Setting up Vundle
     let VundleDefault = 1
     let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
     if !filereadable(vundle_readme)
@@ -13,7 +13,7 @@ set nocompatible
         let VundleDefault = 0
     endif
 
-"Bundles
+" Bundles
     "Bundle Support
         filetype on
         filetype off
@@ -26,22 +26,21 @@ set nocompatible
         endif
 
     "Install Vundles
-	if VundleDefault == 0
-	    echo "Installing Bundles"
-	    echo ""
-	    :BundleInstall
-   	endif
+    if VundleDefault == 0
+        echo "Installing Bundles"
+        echo ""
+        :BundleInstall
+    endif
 "General
-    filetype plugin indent on         " Automatically detect file types.
-    syntax enable                     " Highlight
-    set mouse=a                       " Enable mouse usage
+    filetype plugin indent on                          " Automatically detect file types.
+    syntax enable                                      " Highlight
+    set mouse=a                                        " Enable mouse usage
     set mousehide
     scriptencoding utf-8
-    set history=1000                   " Store history
-    set spell                          " Spell checking
-    set nobackup                       " Stop giving me ~ files. Use jj instead!
-    cmap w!! w !sudo tee % >/dev/null  " When forgot to sudo, write the file
-    autocmd BufWritePre * :%s/\s\+$//e " Delete unwanted spaces
+    set history=1000                                   " Store history
+    set spell                                          " Spell checking
+    cmap w!! w !sudo tee % >/dev/null
+    autocmd BufWritePre * :%s/\s\+$//e                 " Delete unwanted spaces
 
 "User Interface and Formatting
     set t_Co=256
@@ -73,10 +72,9 @@ set nocompatible
     set hlsearch                                       " Highlight search terms
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:.     " Highlight problematic whitespace
     set pastetoggle=<F12>                              " pastetoggle (sane indentation on pastes)
-    "set expandtab                                      " Tabs are spaces
 
     autocmd FileType ruby,haml,javascript,eruby,yaml,html,sass,scss,cucumber,jade,styl set ai sw=2 sts=2 et
-    autocmd FileType python set sw=2 sts=2 et
+    autocmd FileType python set sw=4 sts=4 et
 
 "Map
     "Grep
@@ -85,10 +83,12 @@ set nocompatible
         nmap ,wR :RecurGrep <cword><CR>
         nmap ,wr :RecurGrepFast <cword><CR>
 
+        command! -nargs=1 RecurGrep lvimgrep /<args>/gj ./**/*.* | lopen | set nowrap
+        command! -nargs=1 RecurGrepFast silent exec 'lgrep! <q-args> ./**/*.*' | lopen
+
     "Others
-        nmap <leader>l :set list!<CR> 			" Show me whitespaces
+        nmap <leader>l :set list!<CR>
         nnoremap <F3> :NumbersToggle<CR>
-        noremap jj <Esc>:w<CR>
         map <F4> <C-R>=<CR><LF>
 
 "Plugins
@@ -107,23 +107,6 @@ set nocompatible
         let NERDTreeKeepTreeInNewTab=1
         let g:nerdtree_tabs_open_on_gui_startup=0
 
-    "PyMode
-        let g:pymode_rope = 1
-        let g:pymode_doc = 1
-        let g:pymode_doc_key = 'K'
-        let g:pymode_lint = 1
-        let g:pymode_lint_checker = "pyflakes,pep8"
-        let g:pymode_lint_write = 1 
-        let g:pymode_virtualenv = 1 
-
-        let g:pymode_breakpoint = 1
-        let g:pymode_breakpoint_key = '<leader>b'
-
-        let g:pymode_syntax = 1
-        let g:pymode_syntax_all = 1
-        let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-        let g:pymode_syntax_space_errors = g:pymode_syntax_all
-
     "GitGutter
         let g:gitgutter_eager = 0
         let g:gitgutter_realtime = 0
@@ -131,18 +114,11 @@ set nocompatible
     "Tagbar
         map <F4> :TagbarToggle<CR>
         let g:tagbar_autofocus = 1
-    
+
     "Vim-airline
         let g:airline_powerline_fonts = 0
         let g:airline_theme = 'wombat'
         let g:airline#extensions#whitespace#enabled = 0
-
-    "Statusline -> disable vim-airline for this to work.
-        set statusline=%<%f\                               " Filename
-        set statusline+=%w%h%m%r                           " Options
-        set statusline+=\ [%{&ff}/%Y]                      " Filetype
-        set statusline+=\ [%{getcwd()}]                    " Current dir
-        set statusline+=%=%-14.(%l,%c%V%)\ %p%%            " Right aligned file nav info
 
     "Indent guide lines
         autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#212121 ctermbg=3
@@ -151,6 +127,8 @@ set nocompatible
         let g:indent_guides_guide_size = 1
         set ts=4 sw=4 et
         let g:indent_guides_auto_colors = 0
+
+    "Syntastic
         let g:syntastic_check_on_open=1
 
     "Neocomplcache
@@ -169,11 +147,6 @@ set nocompatible
         let g:neocomplcache_min_syntax_length = 1
         let g:neocomplcache_same_filetype_lists = {}
         let g:neocomplcache_same_filetype_lists._ = '_'"
-    
-    "Tabman
-        let g:tabman_toggle = 'tl'
-        let g:tabman_focus = 'tf'
 
     "Autoclose
         let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
-

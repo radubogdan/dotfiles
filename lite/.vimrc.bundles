@@ -1,0 +1,49 @@
+"Basics
+    set nocompatible
+    set background=dark " Assume a dark background
+
+"Bundle Support
+    filetype on
+    filetype off
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+
+"Bundles
+    "Deps
+        Bundle 'gmarik/vundle'
+
+    "General
+        Bundle 'nathanaelkane/vim-indent-guides'
+        Bundle 'scrooloose/nerdtree'
+        Bundle 'spf13/vim-colors'
+        Bundle 'altercation/vim-colors-solarized'
+        Bundle 'kien/ctrlp.vim'
+        Bundle 'Lokaltog/powerline'
+        Bundle 'myusuf3/numbers.vim'
+        Bundle 'tpope/vim-fugitive'
+        Bundle 'Lokaltog/vim-easymotion'
+        Bundle 'scrooloose/nerdcommenter'
+        Bundle 'tpope/vim-surround'
+        Bundle 'airblade/vim-gitgutter'
+        Bundle 'Raimondi/delimitMate'
+        Bundle 'majutsushi/tagbar'
+        Bundle 'fisadev/vim-ctrlp-cmdpalette'
+        Bundle 'bling/vim-airline'
+        
+
+    "Autocomplete
+        Bundle 'MarcWeber/vim-addon-mw-utils'
+        Bundle 'tomtom/tlib_vim'
+        Bundle 'Shougo/neocomplcache.vim'
+        Bundle 'honza/vim-snippets'
+        Bundle 'garbas/vim-snipmate'
+
+    "Javascript
+        Bundle 'scrooloose/syntastic'
+
+    "HTML
+        Bundle 'tpope/vim-haml'
+        Bundle 'digitaltoad/vim-jade'
+
+    "CSS3
+        Bundle 'wavded/vim-stylus'
