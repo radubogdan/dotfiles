@@ -3,7 +3,9 @@ web-vim-config
 
 This is my personal Vim configuration. It's not the best vim configuration out there, it's made according to my preferences.
 
-It'd  like to think it's a simple vim configuration (not bloated with useless plugins) and it's very good if you are a web developer who use python,django, ruby,  ruby on rails, javascript, html(haml), sass etc.
+It'd  like to think it's a simple vim configuration and it's very good if you are a web developer who uses python,django, ruby,  ruby on rails, javascript, html(haml), sass etc.
+
+There are 2 versions of this, the __normal__ one has more plugins and it's going to load a little bit slow.The __light__ one is faster and has less plugins.
 
 Feel free to fork, pull request or distribute it.
 
@@ -16,24 +18,29 @@ Vundle also updates all of your plugins. I chose this over Pathogen because it w
 
 The main file, where all the customizations occur is ```.vimrc``` and in the second file ```.vimrc.bundles``` are all the plugins that I use.
 
-You can install this with one of following two commands:
+After you choose a version, you can install it:
+
+__Normal:__
 
 ```bash
-curl http://dotix.usr.sh/install.pl -o install.pl && perl install.pl 
+curl http://dotix.usr.sh/install.pl -o install.pl && perl install.pl normal
 ```
 
+__Light:__
+
 ```bash
-wget http://dotix.usr.sh/install.pl && perl install.pl
+curl http://dotix.usr.sh/install.pl -o install.pl && perl install.pl lite
 ```
+
 
 ### Great Plugins!
 
-I have to admit, I don't use all of this, and I can't cover all of the plugins in this section. If you already know what you need, just edit
+I can't cover all of the plugins in this section. If you already know what you need, just edit
 the .vimrc.bundles file. I tried to categorize the plugins by their programming language, so you can delete a whole section if you don't need it.
 
 #### [NerdTree](https://github.com/scrooloose/nerdtree)
 
-This allows you to explore your filesystem, open files and directories. You can use the keyboard, or your mouse, and it allows you 
+This allows you to explore your filesystem, open files and directories. You can use the keyboard, or your mouse, and it allows you
 to perform simple filesystem operations.
 
 ```F12``` opens NerdTree
@@ -83,7 +90,7 @@ use ```:help fugitive```
 
 #### [Tagbar](https://github.com/majutsushi/tagbar)
 
-Awesome plugin for browsing tags of source code. You'll get a sidebar that 
+Awesome plugin for browsing tags of source code. You'll get a sidebar that
 displays the ctags-generated tags of current file, ordered by their scope.
 
 ![Tagbar image][tag-img]
@@ -107,7 +114,7 @@ This plugin provides:
 More information about this with ```:help rails-scripts```
 * Interface to ```Rake``` command. You can use ```:Rake``` to run the current test, spec
 or feature. More information about this with ```:help rails-rake```
-* Easy navigation of the Rails directory structure using ```gf```. To jump between files 
+* Easy navigation of the Rails directory structure using ```gf```. To jump between files
 ```:A``` and ```:R```
 
 #### [Syntastic](https://github.com/scrooloose/syntastic)
