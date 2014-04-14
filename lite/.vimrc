@@ -86,6 +86,20 @@ set nocompatible
         command! -nargs=1 RecurGrep lvimgrep /<args>/gj ./**/*.* | lopen | set nowrap
         command! -nargs=1 RecurGrepFast silent exec 'lgrep! <q-args> ./**/*.*' | lopen
 
+    " Leader
+    let mapleader = "\<Space>"
+
+    " Copy & Paste
+    vmap <Leader>y "+y
+    vmap <Leader>d "+d
+    nmap <Leader>p "+p
+    nmap <Leader>P "+P
+    vmap <Leader>p "+p
+    vmap <Leader>P "+P
+
+    " Visual Mode
+    nmap <Leader><Leader> V
+
     "Others
         nmap <leader>l :set list!<CR>
         nnoremap <F3> :NumbersToggle<CR>
@@ -150,3 +164,11 @@ set nocompatible
 
     "Autoclose
         let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
+
+    "Expand
+        vmap v <Plug>(expand_region_expand)
+        vmap <C-v> <Plug>(expand_region_shrink)
+
+    "CtrlP faster in git
+        let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+        let g:ctrlp_use_caching = 0

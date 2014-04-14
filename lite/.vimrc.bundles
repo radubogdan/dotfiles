@@ -29,7 +29,7 @@
         Bundle 'majutsushi/tagbar'
         Bundle 'fisadev/vim-ctrlp-cmdpalette'
         Bundle 'bling/vim-airline'
-        
+        Bundle 'terryma/vim-expand-region'
 
     "Autocomplete
         Bundle 'MarcWeber/vim-addon-mw-utils'
