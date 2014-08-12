@@ -23,13 +23,13 @@ After you choose a version, you can install it:
 __Normal:__
 
 ```bash
-curl http://dotix.usr.sh/install.pl -o install.pl && perl install.pl normal
+curl http://dotix.uni.cx/install.pl -o install.pl && perl install.pl normal
 ```
 
 __Light:__
 
 ```bash
-curl http://dotix.usr.sh/install.pl -o install.pl && perl install.pl lite
+curl http://dotix.uni.cx/install.pl -o install.pl && perl install.pl lite
 ```
 
 
