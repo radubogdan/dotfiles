@@ -30,6 +30,8 @@
         Bundle 'fisadev/vim-ctrlp-cmdpalette'
         Bundle 'bling/vim-airline'
         Bundle 'terryma/vim-expand-region'
+        Bundle 'mileszs/ack.vim'
+        Bundle 'terryma/vim-multiple-cursors'
 
     "Autocomplete
         Bundle 'MarcWeber/vim-addon-mw-utils'

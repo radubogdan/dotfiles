@@ -3,8 +3,6 @@ web-vim-config
 
 This is my personal Vim configuration. It's not the best vim configuration out there, it's made according to my preferences.
 
-It'd  like to think it's a simple vim configuration and it's very good if you are a web developer who uses python,django, ruby,  ruby on rails, javascript, html(haml), sass etc.
-
 There are 2 versions of this, the __normal__ one has more plugins and it's going to load a little bit slow.The __light__ one is faster and has less plugins.
 
 Feel free to fork, pull request or distribute it.
@@ -23,15 +21,14 @@ After you choose a version, you can install it:
 __Normal:__
 
 ```bash
-curl http://dotix.uni.cx/install.pl -o install.pl && perl install.pl normal
+curl http://dotix.me/install.pl -o install.pl && perl install.pl normal
 ```
 
 __Light:__
 
 ```bash
-curl http://dotix.uni.cx/install.pl -o install.pl && perl install.pl lite
+curl http://dotix.me/install.pl -o install.pl && perl install.pl lite
 ```
-
 
 ### Great Plugins!
 

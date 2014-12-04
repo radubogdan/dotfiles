@@ -40,7 +40,7 @@ set nocompatible
     set history=1000                                   " Store history
     set spell                                          " Spell checking
     cmap w!! w !sudo tee % >/dev/null
-    autocmd BufWritePre * :%s/\s\+$//e                 " Delete unwanted spaces
+    "autocmd BufWritePre * :%s/\s\+$//e                 " Delete unwanted spaces
 
 "User Interface and Formatting
     set t_Co=256
