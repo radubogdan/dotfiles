@@ -3,7 +3,7 @@ web-vim-config
 
 This is my personal Vim configuration. It's not the best vim configuration out there, it's made according to my preferences.
 
-There are 2 versions of this, the __normal__ one has more plugins and it's going to load a little bit slow.The __light__ one is faster and has less plugins.
+There are 2 versions of this, the __normal__ one has more plugins and it's going to load a little bit slow. The __light__ one is faster and has fewer plugins.
 
 Feel free to fork, pull request or distribute it.
 
@@ -37,7 +37,7 @@ the .vimrc.bundles file. I tried to categorize the plugins by their programming 
 
 #### [NerdTree](https://github.com/scrooloose/nerdtree)
 
-This allows you to explore your filesystem, open files and directories. You can use the keyboard, or your mouse, and it allows you
+This allows you to explore your filesystem, open files and directories. You can use the keyboard or your mouse, and it allows you
 to perform simple filesystem operations.
 
 ```F12``` opens NerdTree
@@ -68,13 +68,13 @@ Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tag
 
 #### [Neocomplcache](https://github.com/Shougo/neocomplcache.vim)
 
-Amaizing autocomplete plugin. Just type and you will see how it pops up.
+Amazing autocomplete plugin. Just type and you will see how it pops up.
 
 ![Neocomplcache image][neo-img]
 
 #### [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
 
-You can comment a line or mutliple lines easily. It will automaticaly recognize the languge.
+You can comment a line or multiple lines easily. It will automatically recognize the language.
 
 ```\cn``` - comment current line
 
@@ -82,13 +82,13 @@ You can comment a line or mutliple lines easily. It will automaticaly recognize 
 
 #### [Fugitive](https://github.com/tpope/vim-fugitive)
 
-You can use git commands inside vim. For more informations
+You can use git commands inside vim. For more information
 use ```:help fugitive```
 
 #### [Tagbar](https://github.com/majutsushi/tagbar)
 
 Awesome plugin for browsing tags of source code. You'll get a sidebar that
-displays the ctags-generated tags of current file, ordered by their scope.
+displays the ctags-generated tags of a current file, ordered by their scope.
 
 ![Tagbar image][tag-img]
 
